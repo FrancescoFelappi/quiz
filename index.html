@@ -554,7 +554,7 @@
             <h1>Configura la tua sessione</h1>
             <p class="muted" style="margin:0;">Allenati sulle 133 domande di Reti TLC con spiegazioni verificate da zero.</p>
           </div>
-          <span class="badge badge-primary" id="matchingCountBadge">133 domande selezionate</span>
+          <span class="badge badge-primary" id="matchingCountBadge">20 domande selezionate</span>
         </div>
       </div>
 
@@ -562,19 +562,20 @@
         <div class="card">
           <h2>1. Selezione Domande</h2>
           <div class="pill-group" id="sourceModePills" style="margin-bottom:0.9rem;">
-            <button class="pill active" data-source="all">Tutte (133)</button>
-            <button class="pill" data-source="custom">Personalizzata (N)</button>
+            <button class="pill active" data-source="custom">Esame / Personalizzata</button>
+            <button class="pill" data-source="all">Tutte (133)</button>
             <button class="pill" data-source="topics">Per Argomento</button>
             <button class="pill" data-source="smart">Ripasso Mirato</button>
           </div>
 
-          <div id="panel-custom" class="hidden" style="margin-bottom:0.75rem;">
+          <div id="panel-custom" style="margin-bottom:0.75rem;">
             <div class="soft" style="margin-bottom:0.45rem;">Numero di domande casuali:</div>
             <div class="pill-group">
-              <button class="pill active" data-n="15">15</button>
-              <button class="pill" data-n="30">30 (Esame)</button>
+              <button class="pill" data-n="15">15</button>
+              <button class="pill active" data-n="20">20 (Esame)</button>
+              <button class="pill" data-n="30">30</button>
               <button class="pill" data-n="50">50</button>
-              <input type="number" id="customNInput" class="input-sm" min="1" max="133" value="30" style="width:90px;" />
+              <input type="number" id="customNInput" class="input-sm" min="1" max="133" value="20" style="width:90px;" />
             </div>
           </div>
 
@@ -947,8 +948,8 @@
 
     // Setup state
     const setupCfg = {
-      source: "all",
-      customN: 30,
+      source: "custom",
+      customN: 20,
       selectedTopics: Object.keys(TOPICS),
       topicLimit: 0,
       smartType: "wrong",
